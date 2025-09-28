@@ -30,12 +30,12 @@ source this_env/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-
-3. Test Installation
-
+```
+## 3. Test Installation
+```
 python this_processor.py
-
-4. AI Ingredient Research (Optional)
+```
+## 4. AI Ingredient Research (Optional)
 
 THIS can use Llama 3.3 (70B) for ingredient research.
 
@@ -51,7 +51,7 @@ Run demo:
 
     python llm_demo.py
 
-5. Running the App
+## 5. Running the App
 
     Web App (Recommended):
 
@@ -63,7 +63,7 @@ Command Line:
 
     python this_processor.py
 
-6. Usage
+## 6. Usage
 
 Web App
 
@@ -87,7 +87,7 @@ result = this.analyze_text_directly(
 
 print(result["summary"])
 
-7. Troubleshooting
+## 7. Troubleshooting
 
     Tesseract not found → reinstall or update path in ocr_processor.py
 
@@ -97,7 +97,7 @@ print(result["summary"])
 
     Translation issues → check internet connection
 
-8. Features
+## 8. Features
 
     OCR (read ingredients from images)
 
@@ -109,7 +109,7 @@ print(result["summary"])
 
     Web app + API
 
-9. File Layout
+## 9. File Layout
 
 OSC2/
 ├── app.py               # Flask app
@@ -120,3 +120,4 @@ OSC2/
 ├── uploads/             # Temp images
 ├── results/             # Analysis JSONs
 └── requirements.txt
+
