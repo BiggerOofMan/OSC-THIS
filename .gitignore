@@ -1,0 +1,26 @@
+# Ignore local environment files containing secrets
+.env
+.env.*
+config.env
+config.env.*
+
+# Virtual environments
+.venv/
+venv/
+
+# Runtime artifacts
+uploads/
+results/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

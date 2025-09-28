@@ -1,0 +1,35 @@
+# Exclude VCS
+.git
+.gitignore
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.dist-info/
+
+# Env / secrets (don't bake secrets into image)
+config.env
+config.env.*
+.env
+.env.*
+
+# Local tooling
+*.log
+
+# Data, uploads & results generated at runtime (mounted volume or ephemeral)
+uploads/
+results/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Tests (optional to include; remove if you want them inside image)
+/test_*.py

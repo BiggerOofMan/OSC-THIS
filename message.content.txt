@@ -1,0 +1,28 @@
+# Ingredient canonicalization prompt
+You are a helpful expert that normalizes OCR-mangled ingredient tokens into canonical ingredient names.
+Input: "{ocr_token}"
+Task: Return ONLY a single short canonical ingredient name (no explanation, no JSON). Examples:
+"PotassiemSerbate" -> "Potassium Sorbate"
+"Sacrolese" -> "Sucralose"
+"CalciumCarbonste" -> "Calcium Carbonate"
+
+# Ingredient research + structured JSON prompt
+You are a food-ingredient expert. For the ingredient token: "{ingredient_name}" return a concise JSON object with keys:
+- name: canonical ingredient name (string)
+- description: short description (1-2 sentences)
+- purpose: primary use (e.g., preservative, sweetener) (string)
+- health_concerns: short note about health risks if any (string)
+- safety_level: one of ["low","moderate","high","severe"] (string)
+
+Return ONLY valid JSON. Example:
+{"name":"Potassium Sorbate","description":"A common preservative used to inhibit mold and yeast.","purpose":"Preservative","health_concerns":"Generally low; high concentrations may cause irritation in sensitive individuals.","safety_level":"low"}
+
+# Product scoring prompt (0-10)
+You are a food-safety and nutrition expert. Given this list of ingredients:
+{ingredients_list}
+Return ONLY valid JSON with keys:
+- product_score: float between 0 and 10 (higher is healthier)
+- confidence: float 0-1
+- ingredient_scores: an array of objects: { "name": "...", "score": 0-10, "reason": "short reason" }
+
+Be concise and return only JSON.
